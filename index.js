@@ -1,11 +1,12 @@
 import express from 'express';
 import 'dotenv/config'; 
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const app = express();
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
-    SpeedInsights.start(app);
+  
 });
 
 const port = process.env.PORT || 3000; 
